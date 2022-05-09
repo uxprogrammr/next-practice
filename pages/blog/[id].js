@@ -1,9 +1,11 @@
 import { useRouter } from "next/router";
+import posts from "../../posts.json";
 
 export default function BlogPost() {
   const router = useRouter();
 
   const post = posts[router.query.id];
+  if (!post) return <p></p>;
 
   return (
     <>
