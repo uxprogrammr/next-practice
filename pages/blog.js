@@ -1,3 +1,4 @@
+import Link from "next/link";
 import posts from "../posts.json";
 
 export default function Blog() {
@@ -9,7 +10,11 @@ export default function Blog() {
           return (
             <div>
               <li key={index}>
-                <h3>{posts[id].title}</h3>
+                <h3>
+                  <Link href="/blog/[id]" as={"/blog/" + id}>
+                    <a>{posts[id].title}</a>
+                  </Link>
+                </h3>
                 <p>{posts[id].content}</p>
               </li>
             </div>
