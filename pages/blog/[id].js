@@ -5,7 +5,7 @@ export default function BlogPost() {
   const router = useRouter();
 
   const post = posts[router.query.id];
-  if (!post) return <p></p>;
+  if (!post) return <p>Could not found!</p>;
 
   return (
     <>
