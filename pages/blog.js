@@ -6,7 +6,14 @@ export default function Blog() {
       <h1>Blog</h1>
       <ul>
         {Object.keys(posts).map((id, index) => {
-          return <li key={index}>{posts[id].title}</li>;
+          return (
+            <div>
+              <li key={index}>
+                <h3>{posts[id].title}</h3>
+                <p>{posts[id].content}</p>
+              </li>
+            </div>
+          );
         })}
       </ul>
     </div>
