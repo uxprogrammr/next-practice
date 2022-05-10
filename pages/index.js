@@ -1,5 +1,6 @@
 import Link from "next/link";
-import DogImage from "./dog";
+// import DogImage from "./dog";
+import DogImage from "./dog-server";
 
 export default function Home() {
   return (
